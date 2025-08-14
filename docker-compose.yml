@@ -1,0 +1,14 @@
+# Specifies the version of the Docker Compose file format
+version: '3.8'
+
+# Defines the different application services (containers)
+services:
+  # This is the name of your backend service
+  backend:
+    # Tells Docker Compose to build an image using the Dockerfile
+    # located in the './backend' directory
+    build: ./backend
+    # Maps port 8000 on your local machine to port 8000 inside the container,
+    # allowing you to access the API
+    ports:
+      - "8000:8000"
